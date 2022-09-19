@@ -1,0 +1,25 @@
+﻿<h2>Danh sach hoc sinh</h2>
+<hr>
+<table class="table boder">
+    <tr>
+        <th>
+            <label>Ma nhan vien</label>
+        </th>
+
+        <th>
+            <label>Ten nhan vien</label>
+        </th>
+
+        <th>
+            <label>Tuoi</label>
+        </th>
+    </tr>
+    @foreach (var item in ViewData["Employees"] as List<Employee>)
+    {
+        <tr>
+            <td>@item.EmployeeID</td>
+            <td>@item.EmployeeName</td>
+            <td>@item.EmployeeAge</td>
+        </tr>
+    }
+</table>
